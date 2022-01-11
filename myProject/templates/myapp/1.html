@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/2.css'%}">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynav">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><b>TEAM SENTINELZ</b></a>
+        </div>
+        <div class="collapse navbar-collapse" id="mynav">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Inventors <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a style="background-color:powderblue;" href="#">Rohith James <span class="glyphicons glyphicons-envelope"></span></a></li>
+                <li><a style="background-color:tomato;" href="#">Joell Mathew Kuriakose <span class="glyphicons glyphicons-envelope"></span></a></li>
+                <li><a style="background-color:powderblue;" href="#">Rahul M Das <span class="glyphicons glyphicons-envelope"></span></a></li>
+                <li><a style="background-color:tomato;" href="#">Mathews P Jose <span class="glyphicons glyphicons-envelope"></span></a></li>
+              </ul>
+            </li>
+            <li class="disabled"><a href="#">page 2</a></li>
+            <li class="disabled"><a href="#">page 3</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Contact us</b> <span class="glyphicon glyphicon-phone-alt"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="tel:+9446975812">Call us</a></li>
+                    <li><a href="mailto:mathewspjose@gmail.com?subject=feedback">Email</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </div>
+      </div>
+      </nav>
+      <h1 style="position: sticky; text-align: left; background-color:powderblue; width:99%; height:100%; padding:20px; margin-left:5px; border-left:15px solid blue; border-radius:10px;">
+        <b>AFFORDABLE CPR DEVICE</b>
+      </h1>
+      <hr>
+      <div class="two">
+        <img src="{% static 'images/CPR.jpeg' %}" width="700" height="500" alt="NOT AVAILABLE">
+      </div>
+      <hr>
+      <h2 style="text-align:left; margin-left:50px; text-decoration: underline;">
+        <b>INTRODUCTION</b>
+      </h2>
+      <br>
+      <p class="three" style="text-align: justify; width:90%; margin-left:50px;">
+        Cardiovascular disease (CVD) is globally considered as the leading cause of death with 80% of CVD related deaths being reported from low and middle-income countries like India. Unattended cardiac arrests are fatal as the heart fails to supply oxygen to organs. Manual Cardiac Pulmonary Resuscitation (CPR) is accepted worldwide as a lifesaving technique in cardiac emergencies and it needs to be administered with minimum interruptions, rescue breaths being administered parallelly ensuring full chest recoil. However giving CPR is a very exhausting activity and there are limitations in giving continuous CPR especially during traveling.<br>
+        Due to these reasons many companies introduced CPR machines in the markets.  But the affordability of these products became a major issue. Even if the hospital brought these products they kept it at their hospitals instead of keeping it in an ambulance. But if the product is available at an affordable pricing, the hospitals can use it properly and we can increase the availability. Therefore, the project focuses on the development of a CPR machine which is both affordable and efficient working.
+        The device will give continuous CPR during transportation and other tough situations with minimal disturbance.<br> The product works with an electric motor and uses a slider crank mechanism to convert its rotary motion into linear. The device gives the compression in a depth of 6cm. The motor is mounted on a light weight aluminium frame. The product has a wide pressure pad for compression in order to distribute the pressure uniformly. The user can manually adjust the length of the shaft connected to the pressure pad to make the contact between chest and pressure pad properly. So this product will surely lend a hand to increase the survival rate from cardiac arrests.
+      </p>
+      <br>
+      <hr>
+      <h2 style="text-align:left; margin-left:50px; text-decoration: underline;">
+        <b>WORKING OF PROPOSED SYSTEM</b>
+      </h2>
+      <br>
+      <div style=" text-align:justify; width:90%; margin-left:50px;">
+        <p>
+          The CPR device(fig.) is normally placed in an ambulance, if a possible case of cardiac arrest is reported we have to reach the patient within short span of time, once arrived at the scene check for any signs of movement and once again confirm if it is a case of cardiac arrest after confirmation start manual chest compression during this time the bystander paramedic should setup the stretcher along with the CPR device.
+          Interrupt the manual compression and without losing any time mount the patient onto the stretcher followed by the CPR device.
+        </p>
+        <p>
+           Once the device is mounted, adjust the chest pad so as to match the chest size, then switch on the device.
+           The crank connected to the motor starts to rotate which in turn moves the connecting rod and then the plunger along with the chest pad which is currently at top dead centre( pad at the chest) and once the the crank reaches the bottom dead centre, the pad compress the sternum to a depth of 6cm effectively pushing out blood from the heart and once the motor reaches the top dead centre a vacuum is created in the heart which in turn draws blood back into heart.
+           Once 30 chest compression is completed the arduino sents signal to the relay and shuts off the motor for 2 sec for ventilation then again 30 compression followed by 2sec for ventilation.
+        </p>
+        <p>
+          In addition to this for giving ventilation or rescue breathe without human intervention we have come up with a design that can easily be incorporated to the electrical circuit(fig.)t of CPR device, it consist of  solenoid valve with one end connected to the face mask and the other end to an oxygen cylinder with high pressure .
+          Once the motor is stopped arduino send commands to the solenoid valve via relay that activates the valve for 2 sec allowing oxygen to flow from the oxygen cylinder provided within the ambulance to the patient via face mask.
+        </p>
+      </div>
+      <br>
+      <hr>
+      <h2 style="text-align:left; margin-left:50px; text-decoration: underline;">
+        <b>CIRCUIT DIAGRAM</b>
+      </h2>
+      <center>
+      <div class="two" style="width:50%; margin-top:40px; border:2px solid grey; border-width:2px;">
+        <img src="{% static 'images/circdia.jpeg' %}" class="img-responsive" width="450" height="700" alt="NOT AVAILABLE">
+      </div>
+    </center>
+    <br>
+    <ul style="list-style-type:circle; text-align:left; margin-left:50px; width:90%;">
+      <li>A 12V Timer Relay is used to control the entire circuit. Arduino is not preferred for this application because they can easily malfunction in humid and moist conditions.</li>
+      <li>
+      <dl>
+        <dt>The timer relay has 2 signals</dt>
+        <dd> 1) ON signal</dd>
+        <dd> 2) OFF signal</dd>
+      </dl>
+     </li>
+     <li>
+       For ON signal, the time taken to do 30 revolution is given as an input, here time taken to do 29.5 revolution is given instead of 30rev.
+       This signal is fed to a normally open relay and switches to NC condition thus current flow occurs and the motor starts to rotate from its initial position, once the motor completes 29.5 revolution the signal from the timer  relay stops and the N0 relay switches to its initial condition that is open and the motor stops.
+     </li>
+     <li>
+       In this stage, the internal relay inside the motor gets triggered (which takes place during .5 revolution).
+       Thus current starts to flow through the internal relay into the motor and it completes the .5 rev.
+     </li>
+     <li>
+       When the crank reaches home or initial position, the internal relay switches the circuit to ground, which act as an electronic brake stopping the motor instantaneously.
+     </li>
+     <li>
+       Now,  the timer relay sends OFF signal (2sec delay) to the solenoid valve thereby activating it
+     </li>
+     <li>
+       The solenoid valve has 2 openings, one is connected to the oxygen cylinder and the other connected to the face mask.
+       When activated, oxygen flows from  the cylinder to the patient via face mask for 2sec.
+     </li>
+     <li>
+       After 2sec delay, the timer relay sends ON signal to the motor and the process continues.
+     </li>
+    </ul>
+    <br>
+    <hr>
+    <div style="text-align:left; margin-left:50px; text-decoration: underline;">
+      <div style="float: left; margin-right:10px;"><b>PERCENTAGE COMPLETED: </b></div>
+      <div class="progress" style="background-color:powderblue;">
+        <div class="progress progress-bar-success" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"  style="width:40%; float: right;">40% complete
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="five" style="text-align:left; margin-left:50px; background-color:orange; width:17.8%;">
+    <em>For more information</emp> <a href="https://www.youtube.com/watch?v=RP1zKXZt4V4" target="_blank">CLICK HERE</a>
+    </div>
+  </body>
+</html>
